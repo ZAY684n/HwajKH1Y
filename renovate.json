@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+
+  "extends": ["config:base"],
+
+  "enabledManagers": ["docker-compose"],
+
+  "includePaths": ["examples/**"],
+
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/vendor/**"
+  ],
+
+  "docker-compose": {
+    "managerFilePatterns": [
+      "/(^|/)examples\\/.*\\/(?:docker-)?compose\\.ya?ml$/"
+    ]
+  },
+
+  "separateMajorMinor": true,
+  "separateMinorPatch": true
+}
